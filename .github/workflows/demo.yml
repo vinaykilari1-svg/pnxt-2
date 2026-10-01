@@ -1,0 +1,28 @@
+name: CI-WORKFLOW
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:     # manual
+
+jobs:
+  build:
+    runs-on: ubuntu-slim                     # low cost,  ubuntu-slim very less cpu and Ram
+    steps: 
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo, hello world!
+
+      - name: Run a two-line script
+        run: 
+           echo this is hello world-2,
+           echo This is hellow world-3.
+      
+
+    
+      
+
+    
